@@ -2,6 +2,8 @@
 export VISUAL=vim
 export EDITOR=$VISUAL
 
+export LC_ALL="en_US.UTF-8"
+
 # ensure dotfiles bin directory is loaded first
 export PATH="$HOME/.bin:/usr/local/sbin:/usr/local/bin:$PATH"
 
