@@ -88,7 +88,7 @@ let g:solarized_termtrans=1
 colorscheme solarized
 
 " Make it obvious where 80 characters is
-set textwidth=80
+set textwidth=90
 set colorcolumn=+1
 
 " Numbers
