@@ -12,4 +12,5 @@ if filereadable($HOME . "/.gvimrc.local")
   source ~/.gvimrc.local
 endif
 
-:set guifont=Menlo\ Regular:h14
+:set background=light
+:set guifont=Triplicate\ T4c:h14
