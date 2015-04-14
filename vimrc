@@ -5,6 +5,7 @@ set nocompatible
 " Leader
 let mapleader = " "
 
+set smartcase
 set scrolloff=3
 set backspace=2   " Backspace deletes like most programs in insert mode
 set nobackup
