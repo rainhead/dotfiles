@@ -68,6 +68,15 @@ bindkey "^[[B" down-line-or-beginning-search # Down
 # aliases
 [[ -f ~/.aliases ]] && source ~/.aliases
 
+function zeus {
+  command zeus $@
+  ZE_EC=$?
+  stty sane
+  if [ $ZE_EC = 2 ]; then
+    zeus $@
+  fi
+}
+
 # extra files in ~/.zsh/configs/pre , ~/.zsh/configs , and ~/.zsh/configs/post
 # these are loaded first, second, and third, respectively.
 _load_settings() {
