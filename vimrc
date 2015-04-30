@@ -146,6 +146,22 @@ nnoremap <C-l> <C-w>l
 let g:syntastic_check_on_open=1
 let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
 
+" vroom
+let g:vroom_map_keys = 0
+let g:vroom_clear_screen = 0
+let g:vroom_use_vimux = 1
+let g:vroom_write_all = 1
+let g:vroom_use_zeus = 1
+let g:vroom_use_bundle_exec = 0
+let g:vroom_use_dispatch = 0
+
+
+map <leader>t :VroomRunTestFile<cr>
+map <leader>T :VroomRunNearestTest<cr>
+map <leader>/ :Copen!<cr>
+autocmd BufNewFile,BufRead *_spec.coffee map <buffer> <leader>t :w<cr>:!zeus teaspoon %<cr>
+autocmd BufNewFile,BufRead *_spec.js map <buffer> <leader>t :w<cr>:!zeus teaspoon %<cr>
+
 " Set spellfile to location that is guaranteed to exist, can be symlinked to
 " Dropbox or kept in Git and managed outside of thoughtbot/dotfiles using rcm.
 set spellfile=$HOME/.vim-spell-en.utf-8.add
