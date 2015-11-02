@@ -6,6 +6,7 @@ set nocompatible
 let mapleader = " "
 
 set smartcase
+set ignorecase
 set scrolloff=3
 set backspace=2   " Backspace deletes like most programs in insert mode
 set nobackup
@@ -19,7 +20,7 @@ set laststatus=2  " Always display the status line
 set autowrite     " Automatically :write before running commands
 
 " rainhead
-set title
+" set title
 
 " Switch syntax highlighting on, when the terminal has colors
 " Also switch on highlighting the last used search pattern.
@@ -89,8 +90,8 @@ let g:solarized_termcolors=256
 let g:solarized_termtrans=1
 colorscheme solarized
 
-" Make it obvious where 80 characters is
-set textwidth=90
+" Make it obvious where 90 characters is
+" set textwidth=90
 set colorcolumn=+1
 
 " Numbers

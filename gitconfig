@@ -1,6 +1,6 @@
 [user]
 	name = Peter Abrahamsen
-	email = abrahamsen@substantial.com
+	email = rainhead@gmail.com
 [init]
   templatedir = ~/.git_template
 [push]
@@ -58,3 +58,7 @@
 	insteadOf = git://github.com
 [url "https://github.com/"]
 	insteadOf = git@github.com:
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true
