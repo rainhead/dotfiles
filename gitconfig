@@ -24,6 +24,7 @@
   aa = add --all
   ap = add --patch
   ca = commit --amend
+  branches = for-each-ref --sort=-committerdate --format=\"%(color:blue)%(authordate:relative)\t%(color:red)%(authorname)\t%(color:white)%(color:bold)%(refname:short)\" refs/remotes
   ci = commit -v
   co = checkout
   co-pr = !sh -c 'git fetch origin pull/$1/head:pr/$1 && git checkout pr/$1' -
@@ -36,7 +37,6 @@
   pr = !gh pull-request
   rename-branch = !sh -c 'old=$(git current-branch) && git branch -m $old $1 && git push origin --set-upstream $1 && git push origin --delete $old' -
   st = status
-  up = !git fetch origin && git rebase origin/master
 [core]
   excludesfile = ~/.gitignore
   autocrlf = input
@@ -44,6 +44,8 @@
   template = ~/.gitmessage
 [fetch]
   prune = true
+[rebase]
+  autosquash = true
 [include]
   path = ~/.gitconfig.local
 [mergetool]
