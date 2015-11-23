@@ -1,6 +1,7 @@
 # use vim as the visual editor
 export VISUAL=vim
 export EDITOR=$VISUAL
+export LESS="-Lix2XMRF --shift 3"
 
 # ensure dotfiles bin directory is loaded first
 export PATH="$HOME/.bin:/usr/local/sbin:$PATH"
