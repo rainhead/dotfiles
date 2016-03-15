@@ -12,7 +12,7 @@ alias b="bundle"
 
 # Rails
 alias migrate="rake db:migrate db:rollback && rake db:migrate"
-alias s="rspec"
+#alias s="rspec"
 
 # Pretty print the path
 alias path='echo $PATH | tr -s ":" "\n"'
