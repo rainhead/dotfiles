@@ -33,6 +33,12 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'rking/ag.vim'
 Plugin 'ekalinin/Dockerfile.vim'
 Plugin 'cakebaker/scss-syntax.vim'
+Plugin 'lambdatoast/elm.vim'
+Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
+Plugin 'jbgutierrez/vim-babel'
+Plugin 'mattn/webapi-vim'
+Plugin 'flowtype/vim-flow'
 
 if filereadable(expand("~/.vimrc.bundles.local"))
   source ~/.vimrc.bundles.local

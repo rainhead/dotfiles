@@ -180,14 +180,7 @@ set complete+=kspell
 " Always use vertical diffs
 set diffopt+=vertical
 
-" Vroom
-let g:vroom_map_keys = 0
-let g:vroom_clear_screen = 0
-let g:vroom_use_vimux = 1
-let g:vroom_write_all = 1
-let g:vroom_use_zeus = 1
-let g:vroom_use_bundle_exec = 0
-let g:vroom_use_dispatch = 0
+let g:javascript_plugin_flow = 1
 
 
 map <leader>t :VroomRunTestFile<cr>

@@ -65,8 +65,8 @@
   smudge = git-lfs smudge %f
   required = true
 [transfer] 
-  fsckobjects = true 
+  fsckobjects = true
 [fetch] 
-  fsckobjects = true 
+  fsckobjects = true
 [receive] 
-  fsckObjects = true 
+  fsckObjects = true
