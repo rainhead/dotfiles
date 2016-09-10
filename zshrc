@@ -130,6 +130,7 @@ _load_settings() {
 _load_settings "$HOME/.zsh/configs"
 
 # Local config
+[[ -f ~/.zsh/zsh-history-substring-search.zsh ]] && source ~/.zsh/zsh-history-substring-search.zsh
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
