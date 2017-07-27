@@ -38,7 +38,7 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
 Plugin 'jbgutierrez/vim-babel'
 Plugin 'mattn/webapi-vim'
-Plugin 'flowtype/vim-flow'
+Plugin 'tek/vim-fieldtrip'
 
 if filereadable(expand("~/.vimrc.bundles.local"))
   source ~/.vimrc.bundles.local

@@ -129,6 +129,8 @@ _load_settings() {
 }
 _load_settings "$HOME/.zsh/configs"
 
+fin() { find . -name "*$1" -print0 | xargs -0 grep $2 }
+
 # Local config
 [[ -f ~/.zsh/zsh-history-substring-search.zsh ]] && source ~/.zsh/zsh-history-substring-search.zsh
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local

@@ -5,6 +5,7 @@
   templatedir = ~/.git_template
 [push]
   default = current
+	recurseSubmodules = check
 [color]
   ui = auto
 [color "branch"]
@@ -56,10 +57,6 @@
   required = true
 [credential]
   helper = osxkeychain
-[url "https://github.com"]
-  insteadOf = git://github.com
-[url "https://github.com/"]
-  insteadOf = git@github.com:
 [filter "lfs"]
   clean = git-lfs clean %f
   smudge = git-lfs smudge %f
@@ -67,6 +64,7 @@
 [transfer] 
   fsckobjects = true
 [fetch] 
-  fsckobjects = true
+  fsckobjects = false
+	recurseSubmodules = on-demand
 [receive] 
   fsckObjects = true
