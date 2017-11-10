@@ -96,8 +96,9 @@ let g:solarized_termtrans=1
 colorscheme solarized
 
 
-" Make it obvious where 90 characters is
-" set textwidth=90
+" GitHub diff viewer window is 118 characters wide
+set textwidth=116
+" Make it obvious where text will wrap
 set colorcolumn=+1
 
 " Numbers
@@ -182,6 +183,7 @@ set complete+=kspell
 set diffopt+=vertical
 
 let g:javascript_plugin_flow = 1
+let g:ruby_indent_assignment_style = 'variable'
 
 
 map <leader>t :VroomRunTestFile<cr>

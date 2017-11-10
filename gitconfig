@@ -5,7 +5,7 @@
   templatedir = ~/.git_template
 [push]
   default = current
-	recurseSubmodules = check
+	recurseSubmodules = on-demand
 [color]
   ui = auto
 [color "branch"]
@@ -68,3 +68,5 @@
 	recurseSubmodules = on-demand
 [receive] 
   fsckObjects = true
+[status]
+	submoduleSummary = true
