@@ -7,10 +7,12 @@ set guioptions-=T
 " Use console dialogs
 set guioptions+=c
 
+set background=light
+
+set macligatures
+set guifont=Fira\ Code:h12
+
 " Local config
 if filereadable($HOME . "/.gvimrc.local")
   source ~/.gvimrc.local
 endif
-
-:set background=light
-:set guifont=Triplicate\ T4c:h14

@@ -137,3 +137,5 @@ json() { python -mjson.tool }
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+export PATH=/Users/petera/.local/bin:$PATH
