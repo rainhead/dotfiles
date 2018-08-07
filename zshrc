@@ -14,6 +14,9 @@ fi
 # mkdir .git/safe in the root of repositories you trust
 export PATH=".git/safe/../../bin:$PATH"
 
+# don't fucking beep
+setopt no_beep
+
 # modify the prompt to contain git branch name if applicable
 git_prompt_info() {
   current_branch=$(git current-branch 2> /dev/null)
