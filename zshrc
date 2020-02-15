@@ -4,7 +4,7 @@ export EDITOR=$VISUAL
 export LESS="-Lix2XMRF --shift 3"
 
 # ensure dotfiles bin directory is loaded first
-export PATH="$HOME/.bin:/usr/local/sbin:$PATH"
+export PATH="$HOME/.bin:/usr/local/opt/sqlite/bin:/usr/local/sbin:$PATH"
 
 # load rbenv if available
 if command -v rbenv >/dev/null; then
@@ -16,6 +16,9 @@ export PATH=".git/safe/../../bin:$PATH"
 
 # don't fucking beep
 setopt no_beep
+
+autoload colors
+colors
 
 # modify the prompt to contain git branch name if applicable
 git_prompt_info() {
@@ -29,6 +32,9 @@ export PS1='${SSH_CONNECTION+"%{$fg_bold[green]%}%n@%m:"}%{$fg_bold[blue]%}%c%{$
 
 # load our own completion functions
 fpath=(~/.zsh/completion /usr/local/share/zsh/site-functions /usr/local/share/zsh-completions $fpath)
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
+fi
 
 # completion
 autoload -U compinit
@@ -132,7 +138,7 @@ _load_settings() {
 }
 _load_settings "$HOME/.zsh/configs"
 
-fin() { find . -name "*$1" -print0 | xargs -0 grep $2 }
+fin() { find . -type f -name "*$1" -print0 | xargs -0 grep $2 }
 json() { python -mjson.tool }
 
 # Local config
@@ -140,5 +146,3 @@ json() { python -mjson.tool }
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-export PATH=/Users/petera/.local/bin:$PATH

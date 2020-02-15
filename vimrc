@@ -5,6 +5,7 @@ set nocompatible
 " Leader
 let mapleader = " "
 
+set nofoldenable
 set smartcase
 set ignorecase
 set scrolloff=3
@@ -53,6 +54,7 @@ augroup vimrcEx
   " Set syntax highlighting for specific file types
   autocmd BufRead,BufNewFile Appraisals set filetype=ruby
   autocmd BufRead,BufNewFile *.md set filetype=markdown
+  autocmd BufRead,BufNewFile *.pl set filetype=prolog
 
   " Enable spellchecking for Markdown
   autocmd FileType markdown setlocal spell
@@ -184,6 +186,7 @@ set diffopt+=vertical
 
 let g:javascript_plugin_flow = 1
 let g:ruby_indent_assignment_style = 'variable'
+let g:syntastic_rust_checkers = ['rustc']
 
 
 map <leader>t :VroomRunTestFile<cr>

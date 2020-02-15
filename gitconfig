@@ -56,7 +56,7 @@
   smudge = git hawser smudge %f
   required = true
 [credential]
-  helper = osxkeychain
+	helper = osxkeychain
 [filter "lfs"]
   clean = git-lfs clean %f
   smudge = git-lfs smudge %f
@@ -70,3 +70,5 @@
   fsckObjects = true
 [status]
 	submoduleSummary = true
+[url "https://github.com/"]
+	insteadOf = git@github.com:
