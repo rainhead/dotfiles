@@ -18,7 +18,7 @@ alias migrate="rake db:migrate db:rollback && rake db:migrate"
 alias path='echo $PATH | tr -s ":" "\n"'
 
 # Rust
-alias build-linux='docker run --rm --user "$(id -u)":"$(id -g)" -v "$PWD":/usr/src/myapp -w /usr/src/myapp rust:1 cargo build'
+alias build-linux='docker run --rm --user "$(id -u)":"$(id -g)" -v "$PWD":/usr/src/myapp -w /usr/src/myapp rust:1.41 cargo build'
 
 # Include custom aliases
 [[ -f ~/.aliases.local ]] && source ~/.aliases.local

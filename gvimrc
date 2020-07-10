@@ -10,7 +10,7 @@ set guioptions+=c
 set background=light
 
 set macligatures
-set guifont=Fira\ Code:h12
+set guifont=Triplicate\ T4:h13
 
 " Local config
 if filereadable($HOME . "/.gvimrc.local")
